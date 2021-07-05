@@ -6,15 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Felipe Azzolino Varella - sudoku-solver</title>
+		<title>Felipe Azzolino Varella - super-smartio-world</title>
 		<meta charset="utf-8" />
 		<!-- Não remover tag abaixo! Usada para verificação do Google -->
 		<meta name="google-site-verification" content="yvNj0FkQY2HJK76FxUgI8k9P6o-QHYaIMKpYPOyy_bw"	/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Este projeto tem como objetivo resolver problemas 9x9 de 
-		Sudoku." />
-		<meta name="keywords" content="Python, Inteligência Artificial, Algoritmos de Busca, Busca
-		em Largura, Busca em Profundidade, Busca A*, AC-3, Backtracking, Sudoku" />
+		<meta name="description" content="Este projeteto tem como objetivo treinar um conjunto de agentes
+		para que joguem a fase Yoshi Island 2 do jogo Super Mario World." />
+		<meta name="keywords" content="Python, Inteligência Artificial, Aprendizado de Máquina, 
+		Algoritmos Genéticos, Neuroevolução, NEAT, NEAT-Python, Super Mario World" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="sortcut icon" href="images/icons/ai.ico" type="image/x-icon" />
 	</head>
@@ -39,7 +39,7 @@
 					<section id="one">
 						<header class="major">
 							<!-- Nome do Projeto -->  
-							<h2>Projeto sudoku-solver<h2>
+							<h2>Projeto super-smartio-world</h2>
 						</header>
 						<h4>
 							<ul>
@@ -60,12 +60,12 @@
 						<h4> 
 							<ul>
 								<li>
-									<u>Linguagem</u>: Python 3.7.0
+									<u>Linguagem</u>: Python 3.8.5
 								</li><li>
-									<u>Palavras Chave</u>: Python, Inteligência Artificial, Algoritmos de Busca, Busca
-									em Largura, Busca em Profundidade, Busca A*, AC-3, Backtracking, Sudoku.
+									<u>Palavras Chave</u>: Python, Inteligência Artificial, Aprendizado de Máquina, 
+									Algoritmos Genéticos, Neuroevolução, NEAT, NEAT-Python, Super Mario World.
 								</li><li style="text-align: left;">   <!-- Mudamos aqui para que não fique "Esticado" -->
-									<u>Link do Projeto</u>: <a href="https://github.com/azzolinovarella/sudoku-solver">https://github.com/azzolinovarella/sudoku-solver</a>
+									<u>Link do Projeto</u>: <a href="https://github.com/azzolinovarella/super-smartio-world">https://github.com/azzolinovarella/super-smartio-world</a>
 								</li>
 							</ul>
 						</h4>
@@ -74,58 +74,46 @@
 				<!-- Parte 3: Consderações Iniciais -->
 					<section id="three">
 						<a id="explicacao-geral-do-projeto"><h3>Explicação Geral do Projeto</h3></a>
-						<h4>
-							<p>
-								Em suma, o objetivo deste projeto é resolver problemas 9x9 do jogo
-							    Sudoku. A partir da passagem do algoritmo de busca desejado (que 
-							    pode ser BFS, DFS, A*, AC3 ou Backtracking) e de uma arquivo de texto 
-							    contendo um problema por linha, representados por uma String com 81 
-							    caracteres  (onde os 9 primeiros representam a primeira linha, os 9  
-							    seguintes a segunda, e assim por diante) ou a partir da passagem do 
-							    problema via input (requisitado no terminal quando executado o módulo 
-							    main), este programa busca encontrar a solução para cada problema, 
-							    imprimindo ao final a String de solução bem como o problema em um grid 
-							    de Sudoku. 
-							</p><p>
-							    A String que representa o problema deve conter um ponto (".") nas casas 
-							    onde o valor é desconhecido, conter exatamente 81 caracteres e possuir 
-							    uma única solução possível. Desta forma, um exemplo válido de String 
-							    seria:<pre><h5 style="text-align: center; white-space: normal">
-									<code>.......2143.......6........2.15..........637...........68...4.....23........7....</code>
-								</h5></pre>
-							    Interpretada como:<pre><h5 style="text-align: center; white-space: normal">
-									<code>|. . .|. . .|. 2 1|
-									  	  |4 3 .|. . .|. . .|
-									      |6 . .|. . .|. . .|
-									      |-----+-----+-----|
-									      |2 . 1|5 . .|. . .|
-									      |. . .|. . 6|3 7 .|
-									      |. . .|. . .|. . .|
-									      |-----+-----+-----|
-									      |. 6 8|. . .|4 . .|
-									      |. . .|2 3 .|. . .|
-									      |. . .|. 7 .|. . .|</code>
-										</h5></pre>
-							    Tendo como solução:<pre><h5 style="text-align: center; white-space: normal">
-									<code>|8 5 7|3 4 9|6 2 1|
-										  |4 3 2|8 6 1|5 9 7|
-										  |6 1 9|7 5 2|8 4 3|
-										  |-----+-----+-----|
-										  |2 7 1|5 8 3|9 6 4|
-										  |9 4 5|1 2 6|3 7 8|
-										  |3 8 6|4 9 7|2 1 5|
-										  |-----+-----+-----|
-									  	  |7 6 8|9 1 5|4 3 2|
-									  	  |1 9 4|2 3 8|7 5 6|
-									  	  |5 2 3|6 7 4|1 8 9|</code>
-								</h5></pre>
-							    Que representada por uma String seria:
-							    <pre><h5 style="text-align: center; white-space: normal">
-									<code>857349621432861597619752843271583964945126378386497215768915432194238756523674189</code></h5></pre>
-							</p><p>
-								Instruções de execução podem ser encontradas no README do projeto:
-							<a href="https://github.com/azzolinovarella/sudoku-solver/blob/master/README.md">
-							<h4 style="text-align: center;">https://github.com/azzolinovarella/sudoku-solver/blob/master/README.md</h4></a>							
+						<h4><p>
+							A partir do uso da biblioteca externa NEAT-Python, buscou-se fazer uso do algoritmo 
+							conhecido por NEAT (NeuroEvolution of Augmenting Topologies) para criar o um agente 
+							inteligente capaz de jogar a fase YoshiIsland2 do jogo Super Mario World. Esse algoritmo 
+							parte do conceito conhecido por Neuroevolução, buscando evoluir redes neurais artificiais 
+							utilizando algoritmos genéticos até encontramos a topologia desejada (i.e., em nosso caso 
+							é aquela que capacita um agente a terminar a fase YoshiIsland2).
+						</p><p>
+							Para este projeto foi necessário criar um arquivo de configuração (exigido pela biblioteca 
+							NEAT-Python), responsável por indicar os argumentos utilizados pelo algoritmo. Ressalta-se 
+							que alguns parâmetros receberam valores default (encontrados na documentação da biblioteca) 
+							enquanto outros como a quantidade de neurônios nas camadas de entrada, saída e ocultas 
+							("num_inputs", "num_outputs" e "num_hidden" respectivamente), função de ativação 
+							("activation_default"), tamanho da população ("pop_size"), quantidades de indivíduos 
+							preservados por geração ("elitism"), porcentagem de individuos que irão se reproduzir 
+							("survival_threshold") e etc., foram modificados por tentativa e erro e baseando-se em 
+							literaturas (contidas nas referências dentro do README do projeto).</p>
+
+						<p>Por fim, destaca-se que esse projeto foi dividido em 4 módulos:
+							<ul> 
+								<li>
+									train.py: Treina um grupo de agentes para jogar a fase YoshiIsland2, 
+									salvando sempre o melhor para que possa ser usado posteriormente. 
+								</li><li>
+									play.py: Faze com que um individuo ou um grupo de agentes jogue a fase 
+									selecionada que, por padrão, é a YoshiIsland2.
+								</li><li>
+									plot_evolution.py: Valida de forma gráfica a evolução, gerando
+									um gráfico de fitness máximo por geração e o salvando em um arquivo
+									de foto.
+								</li><li>
+									generate_video.py: Cria um vídeo MP4 do melhor agente jogando a
+									fase selecionada que, por padrão, é a YoshiIsland2.
+								</li>
+							</ul>
+						</p><p>
+							Informações detalhadas sobre cada módulo bem como instruções de execução, 
+							podem ser encontradas no README do projeto:<br><br>
+							<a href="https://github.com/azzolinovarella/super-smartio-world/blob/master/README.md">
+							<h4 style="text-align: center;">https://github.com/azzolinovarella/super-smartio-world/blob/master/README.md</h4></a>							
 							</p>
 						</h4>
 					</section>
