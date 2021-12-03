@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com o intuito de divulgar minhas informações pes
 
 <br>
 
-## Licensa
+## Licença
 Strata by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
