@@ -4,7 +4,13 @@
     <head>
         <title>Em Desenvolvimento!</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <script>  // Para garantir que a página puxe sempre o 404 da raiz e consiga importar corretamente o stylesheet e assets
+            var path = window.location.pathname;
+            if (path !== "/404.html") {
+              history.replaceState(null, "", "/404.html");  // Altera a URL para sempre mostrar 404.html
+            }
+          </script>
+          <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>                                                   
         <h5 style="text-align: center; color: #000;"><xmp>                                                
